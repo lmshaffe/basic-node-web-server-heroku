@@ -1,5 +1,5 @@
 {
-  "name": "basic-node-web-server-heroku",
+  "name": "node-web-server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
