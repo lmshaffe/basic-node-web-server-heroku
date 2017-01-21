@@ -2,7 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
-const port = process.env.PORT || 3000;
+const myPort = process.env.PORT || 3000;
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
   res.render('home.hbs', {
     pageTitle: 'Home Page',
     welcomeMessage: 'Welcome to my website',
-    port: port
+    myPort: myPort
   });
 });
 
@@ -59,6 +59,6 @@ app.get('/bad', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server is up on port ${port}`);
+app.listen(myPort, () => {
+  console.log(`Server is up on port ${myPort}`);
 });
